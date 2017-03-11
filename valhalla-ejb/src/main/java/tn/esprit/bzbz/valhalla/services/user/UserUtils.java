@@ -26,6 +26,7 @@ public class UserUtils {
 		user.setId(1);
 		user.setEmail("mbk");
 		user.setPassword("mbk");
+		user.setRole("user");
 		entityManager.persist(user);
 	}
 }
