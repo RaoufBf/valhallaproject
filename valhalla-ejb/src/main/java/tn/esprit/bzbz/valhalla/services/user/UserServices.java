@@ -1,6 +1,13 @@
 package tn.esprit.bzbz.valhalla.services.user;
 
+import javax.annotation.Resource;
 import javax.ejb.Stateless;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -15,6 +22,8 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 
 	@PersistenceContext
 	private EntityManager entityManager;
+	@Resource(name = "java:jboss/mail/Gmail")
+	private Session session;
 
 	/**
 	 * Default constructor.
@@ -53,6 +62,19 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 		User userf = findById(id);
 		userf.setState("Banned");
 		entityManager.merge(userf);
+		Message message = new MimeMessage(session);
+
+		try {
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(userf.getEmail(), false));
+			message.setSubject("Vous avez été banni du forum Valhalla");
+			message.setText(
+					"D'apres plusieurs réclamations des membres ou suite a un comportement inapproprié vous avez été banni du forum Valhalla");
+			Transport.send(message);
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 }

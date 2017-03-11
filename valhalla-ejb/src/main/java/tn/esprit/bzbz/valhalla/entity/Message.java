@@ -33,7 +33,7 @@ public class Message implements Serializable {
 	public Message() {
 		super();
 	}
-
+	
 	public Message(String content, User userOne, User userTwo) {
 		super();
 		this.messageId = new MessageId(userOne.getId(), userTwo.getId());
