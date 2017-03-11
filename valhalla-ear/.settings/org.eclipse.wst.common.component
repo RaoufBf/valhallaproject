@@ -3,11 +3,17 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dependent-module archiveName="valhalla-web.war" deploy-path="/" handle="module:/resource/valhalla-web/valhalla-web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
 =======
 >>>>>>> 29af926dffed0fae287f3abad4218095a3273c5f
+=======
+        <dependent-module archiveName="valhalla-web.war" deploy-path="/" handle="module:/resource/valhalla-web/valhalla-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+>>>>>>> origin/mbk
         <dependent-module archiveName="valhalla-ejb.jar" deploy-path="/" handle="module:/resource/valhalla-ejb/valhalla-ejb">
             <dependency-type>uses</dependency-type>
         </dependent-module>

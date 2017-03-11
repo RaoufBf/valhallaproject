@@ -29,8 +29,14 @@ public class User implements Serializable {
 	private String image;
 	private Date lastLogin;
 	private String role;
+<<<<<<< HEAD
 	private Date promotionDate;
 	
+=======
+	private String state;
+	private Date promotionDate;
+
+>>>>>>> origin/mbk
 	@OneToMany(mappedBy = "userOne")
 	private List<Message> messagesSent;
 
@@ -42,10 +48,17 @@ public class User implements Serializable {
 
 	@OneToMany(mappedBy = "user")
 	private List<Subject> subjects;
+<<<<<<< HEAD
 	
 	@OneToMany(mappedBy = "user")
 	private List<Follow> follows;
 	
+=======
+
+	@OneToMany(mappedBy = "user")
+	private List<Follow> follows;
+
+>>>>>>> origin/mbk
 	@OneToMany(mappedBy = "user")
 	private List<ReportSubject> reports;
 
@@ -147,6 +160,33 @@ public class User implements Serializable {
 		return this.image;
 	}
 
+<<<<<<< HEAD
+=======
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public List<Follow> getFollows() {
+		return follows;
+	}
+
+	public void setFollows(List<Follow> follows) {
+		this.follows = follows;
+	}
+
+	public List<ReportSubject> getReports() {
+		return reports;
+	}
+
+	public void setReports(List<ReportSubject> reports) {
+		this.reports = reports;
+	}
+
+>>>>>>> origin/mbk
 	public void setImage(String image) {
 		this.image = image;
 	}

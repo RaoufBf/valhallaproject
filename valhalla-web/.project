@@ -21,22 +21,38 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>org.eclipse.m2e.core.maven2Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
+=======
 			<name>org.jboss.tools.jst.web.kb.kbbuilder</name>
+>>>>>>> origin/mbk
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
+			<name>org.jboss.tools.jst.web.kb.kbbuilder</name>
+=======
 			<name>org.jboss.tools.ws.jaxrs.metamodelBuilder</name>
+>>>>>>> origin/mbk
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
+			<name>org.jboss.tools.ws.jaxrs.metamodelBuilder</name>
+=======
 			<name>org.eclipse.wst.validation.validationbuilder</name>
+>>>>>>> origin/mbk
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+<<<<<<< HEAD
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+=======
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+>>>>>>> origin/mbk
 			<arguments>
 			</arguments>
 		</buildCommand>

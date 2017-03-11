@@ -7,6 +7,13 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class ReportSubjectId implements Serializable {
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+>>>>>>> origin/mbk
 	private Integer userId;
 	private Integer subjectId;
 	

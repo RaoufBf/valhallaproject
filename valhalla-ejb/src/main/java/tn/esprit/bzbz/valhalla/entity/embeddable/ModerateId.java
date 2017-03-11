@@ -7,6 +7,13 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class ModerateId implements Serializable {
 
+<<<<<<< HEAD
+=======
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+>>>>>>> origin/mbk
 	private Integer moderatorId;
 	private Integer sectionId;
 	

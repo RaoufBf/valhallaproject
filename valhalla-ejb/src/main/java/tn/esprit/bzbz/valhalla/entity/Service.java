@@ -20,7 +20,11 @@ public class Service implements Serializable {
 	private String serviceName;
 	private String description;
 	private String image;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> origin/mbk
 	@OneToMany(mappedBy = "service")
 	private List<Section> sections;
 	private static final long serialVersionUID = 1L;

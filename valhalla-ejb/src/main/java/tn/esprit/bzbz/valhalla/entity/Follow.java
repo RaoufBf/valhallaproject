@@ -3,7 +3,14 @@ package tn.esprit.bzbz.valhalla.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+<<<<<<< HEAD
 import javax.persistence.*;
+=======
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+>>>>>>> origin/mbk
 
 import tn.esprit.bzbz.valhalla.entity.embeddable.FollowId;
 
@@ -25,7 +32,11 @@ public class Follow implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "userId", referencedColumnName = "id", updatable = false, insertable = false)
 	private User user;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> origin/mbk
 	private Date date;
 
 	public Follow(User user, Section section) {
