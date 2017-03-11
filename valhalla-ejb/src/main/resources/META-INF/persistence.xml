@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="valhalla-ejb">
+		<jta-data-source>java:/PvalhallaDS</jta-data-source>
+		<class>tn.esprit.bzbz.valhalla.entity.Comment</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Follow</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Message</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Moderate</class>
+		<class>tn.esprit.bzbz.valhalla.entity.ReportSubject</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Section</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Service</class>
+		<class>tn.esprit.bzbz.valhalla.entity.Subject</class>
+		<class>tn.esprit.bzbz.valhalla.entity.User</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.CommentId</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.FollowId</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.MessageId</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.ModerateId</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.ReportCommentId</class>
+		<class>tn.esprit.bzbz.valhalla.entity.embeddable.ReportSubjectId</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		</properties>
+	</persistence-unit>
+</persistence>
