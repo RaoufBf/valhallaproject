@@ -1,5 +1,7 @@
 package tn.esprit.bzbz.valhalla.services.signin;
 
+import java.util.Date;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 import javax.naming.NamingException;
@@ -39,7 +41,9 @@ public class SignInServices implements SignInServicesRemote, SignInServicesLocal
 			if (!userFound.getPassword().equals(password)) {
 				return -1;
 			} else {
-				userConnecte = userFound.getId();
+				Date sysdate = new Date();
+				userFound.setLastLogin(sysdate);
+				entityManager.merge(userFound);
 				return userFound.getId();
 
 			}

@@ -38,10 +38,17 @@ public class PrivateMessageServices implements PrivateMessageServicesRemote, Pri
 		javax.mail.Message message = new MimeMessage(session);
 
 		try {
+<<<<<<< HEAD
 			message.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(userTwo.getEmail(), false));
 			message.setSubject("Nouveau message sur Valhalla");
 			message.setText(
 					"Vous avez recu un nouveau message de "+userOne.getUsername()+"sur le Valhalla forum");
+=======
+			message.setRecipients(javax.mail.Message.RecipientType.TO,
+					InternetAddress.parse(userTwo.getEmail(), false));
+			message.setSubject("Nouveau message sur Valhalla");
+			message.setText("Vous avez recu un nouveau message de " + userOne.getUsername() + "sur le Valhalla forum");
+>>>>>>> mbk
 			Transport.send(message);
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
