@@ -4,6 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import tn.esprit.bzbz.valhalla.entity.User;
 import tn.esprit.bzbz.valhalla.services.user.UserServicesRemote;
 
 public class FindUserTest {
@@ -12,8 +13,9 @@ public class FindUserTest {
 		Context context = new InitialContext();
 		UserServicesRemote userServicesRemote = (UserServicesRemote) context.lookup(
 				"valhalla-ear/valhalla-ejb/UserServices!tn.esprit.bzbz.valhalla.services.user.UserServicesRemote");
-
-		userServicesRemote.banUser(1);
+		User user = userServicesRemote.findById(1);
+		user.setLastName("OKAAAAAAAAAY");
+		userServicesRemote.updateUser(user);
 
 	}
 
