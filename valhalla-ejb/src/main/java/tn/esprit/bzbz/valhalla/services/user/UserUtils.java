@@ -34,5 +34,11 @@ public class UserUtils {
 		user2.setPassword("mbk");
 		user2.setEmail("moatezbkilani@gmail.com");
 		entityManager.persist(user2);
+		User user3 = new User();
+		// user2.setId(2);
+		user3.setUsername("MBK3");
+		user3.setPassword("mbk");
+		user3.setEmail("moatez.ben.kilani@gmail.com");
+		entityManager.persist(user3);
 	}
 }
