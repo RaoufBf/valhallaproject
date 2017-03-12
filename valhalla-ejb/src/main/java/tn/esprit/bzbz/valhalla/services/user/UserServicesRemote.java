@@ -11,4 +11,6 @@ public interface UserServicesRemote {
 	void banUser(Integer id);
 
 	User findById(Integer id);
+
+	public void updateUser(User user);
 }

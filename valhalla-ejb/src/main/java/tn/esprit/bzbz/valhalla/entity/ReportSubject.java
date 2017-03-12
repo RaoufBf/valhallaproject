@@ -3,7 +3,10 @@ package tn.esprit.bzbz.valhalla.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import tn.esprit.bzbz.valhalla.entity.embeddable.ReportSubjectId;
 
@@ -14,26 +17,25 @@ import tn.esprit.bzbz.valhalla.entity.embeddable.ReportSubjectId;
 @Entity
 
 public class ReportSubject implements Serializable {
-	
+
 	@EmbeddedId
 	private ReportSubjectId reportSubjectId;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "userId", referencedColumnName = "id", updatable = false, insertable = false)
 	private User user;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "subjectId", referencedColumnName = "id", updatable = false, insertable = false)
 	private Subject subject;
-	
+
 	private Date date;
-	
+
 	private String reason;
-	
-	
-	public ReportSubject(User user, Subject subject, Date date, String reason) {
+
+	public ReportSubject(User user, Subject subject, String reason) {
 		super();
-		this.reportSubjectId = new ReportSubjectId(user.getId(),subject.getId());
+		this.reportSubjectId = new ReportSubjectId(user.getId(), subject.getId());
 		this.user = user;
 		this.subject = subject;
 		this.date = new Date();
@@ -85,5 +87,5 @@ public class ReportSubject implements Serializable {
 	public ReportSubject() {
 		super();
 	}
-   
+
 }

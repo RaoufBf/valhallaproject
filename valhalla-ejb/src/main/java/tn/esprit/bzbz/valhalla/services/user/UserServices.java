@@ -36,6 +36,10 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 
 	}
 
+	public void updateUser(User user) {
+		entityManager.merge(user);
+	}
+
 	public User findById(Integer id) {
 		try {
 			return (User) entityManager.createQuery("select u from User u where u.id LIKE :custId")
