@@ -23,13 +23,13 @@ public class UserUtils {
 	@PostConstruct
 	public void initDb() {
 		User user = new User();
-		user.setId(1);
+		// user.setId(1);
 		user.setUsername("MBK1");
 		user.setPassword("mbk");
 		user.setEmail("moatez.benkilani@esprit.tn");
 		entityManager.persist(user);
 		User user2 = new User();
-		user2.setId(2);
+		// user2.setId(2);
 		user2.setUsername("MBK2");
 		user2.setPassword("mbk");
 		user2.setEmail("moatezbkilani@gmail.com");
