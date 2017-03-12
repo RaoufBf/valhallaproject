@@ -68,7 +68,15 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 	public void upgradeUser ( Integer id){
 		User userf = findById(id);
 		userf.setRole("Moderator");
-		userf.setBirthDate(new Date());
+		userf.setPromotionDate(new Date());
+		entityManager.merge(userf);
+		
+		}
+	@Override
+	public void downgradeModerator ( Integer id){
+		User userf = findById(id);
+		userf.setRole("user");
+		userf.setPromotionDate(new Date());
 		entityManager.merge(userf);
 		
 		}

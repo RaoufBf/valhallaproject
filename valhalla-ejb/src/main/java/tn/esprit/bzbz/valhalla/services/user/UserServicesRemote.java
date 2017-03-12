@@ -17,4 +17,6 @@ public interface UserServicesRemote {
 	List<User> findAllUser();
 
 	void upgradeUser(Integer id);
+
+	void downgradeModerator(Integer id);
 }
