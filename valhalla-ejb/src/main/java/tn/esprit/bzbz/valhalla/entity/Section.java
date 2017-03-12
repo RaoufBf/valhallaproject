@@ -33,6 +33,17 @@ public class Section implements Serializable {
 	public void setState(String state) {
 		this.state = state;
 	}
+	
+
+	public Section(String sectionName, String description, String image, String state, Service service) {
+		super();
+		this.sectionName = sectionName;
+		this.description = description;
+		this.image = image;
+		this.state = state;
+		this.service = service;
+	}
+
 
 	@OneToMany(mappedBy = "section")
 	private List<Subject> subjects;

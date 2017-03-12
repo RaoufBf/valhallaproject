@@ -16,7 +16,7 @@ public class ServicesTests {
 		ServiceServicesRemote serviceServicesRemote = (ServiceServicesRemote) context.lookup(
 				"valhalla-ear/valhalla-ejb/ServiceServices!tn.esprit.bzbz.valhalla.services.service.ServiceServicesRemote");
 
-		//serviceServicesRemote.createService("serviceName", "description", "image");
+		serviceServicesRemote.createService("serviceName", "description", "image");
 		//serviceServicesRemote.deleteService(2);
 		//serviceServicesRemote.updateService(3, "", "desc jdida", "");
 		

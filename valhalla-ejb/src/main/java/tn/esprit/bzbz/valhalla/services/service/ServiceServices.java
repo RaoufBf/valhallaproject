@@ -42,6 +42,7 @@ public class ServiceServices implements ServiceServicesRemote, ServiceServicesLo
 		entityManager.persist(newService);
 	}
 
+	@Override
 	public Boolean deleteService(Integer id) {
 		Service serviceToFind = this.findServiceById(id);
 		if (serviceToFind != null) {
@@ -52,6 +53,7 @@ public class ServiceServices implements ServiceServicesRemote, ServiceServicesLo
 		return false;
 	}
 
+	@Override
 	public Boolean updateService(Integer id, String name, String description, String image) {
 		Service serviceToUpdate = this.findServiceById(id);
 		if (serviceToUpdate != null) {
